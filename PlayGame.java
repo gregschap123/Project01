@@ -9,7 +9,7 @@ public class PlayGame
 {
 
     ArrayList<Nation> allLivingNations = new ArrayList<>();
-    ArrayList<People> worldLivingPopulation = new ArrayList<>();
+    ArrayList<Project01.People> worldLivingPopulation = new ArrayList<>();
     Random generator;
 
     public PlayGame()
