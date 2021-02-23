@@ -5,6 +5,7 @@ public enum PeopleType
     warrior ("Solder"),
     wizzard  ("Tricky");
 
+
     private String description;
 
     PeopleType (String types)
