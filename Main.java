@@ -16,12 +16,21 @@ public class Main {
        int gameLifePoints = 2000;
        ArrayList<Nation> nations = new ArrayList<>() ; // nations create tribes create people
        PlayGame game = new PlayGame();
+<<<<<<< HEAD
 	   nations.add(new Nation("Idiots", (gameLifePoints / 2)));
 	   nations.add(new Nation("Minions", (gameLifePoints) / 2));
 	   nations.add(new Nation("Smilons", (gameLifePoints)/2));
 	   nations.add(new Nation("Naveed", (gameLifePoints) / 2));
+=======
+	   nations.add(new Nation("Idiots", (gameLifePoints / 6)));
+	   nations.add(new Nation("Minions", (gameLifePoints) / 6));
+	   nations.add(new Nation("Smilons", (gameLifePoints)/ 6));
+	   nations.add(new Nation("Naveed", (gameLifePoints) / 6));
+	   nations.add(new Nation("Perez", (gameLifePoints) / 6));
+>>>>>>> c9f9655fc6b0de0e241f3e02963120530d809754
 
-	   // could add and delete nations. return number of nations + 1 from add and number of nations -1 from remove.
+
+        // could add and delete nations. return number of nations + 1 from add and number of nations -1 from remove.
 	   for(int i = 0; i < 40; i++)
        {
            System.out.println("Round number: " + i);
