@@ -45,7 +45,7 @@ public class PlayGame
     }
 
 
-    public void encounter(People p1, People p2)
+    public void encounter(Project01.People p1, Project01.People p2)
     {
         // need to fix this to take strategies into account.
         if(p1.getNation() != p2.getNation())
