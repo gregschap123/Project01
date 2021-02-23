@@ -4,7 +4,7 @@ public enum PeopleType
 {
     warrior ("Solder"),
     wizzard  ("Tricky");
-
+    healer ("Medic"); 
 
     private String description;
 
