@@ -21,6 +21,7 @@ public class Main {
 	   nations.add(new Nation("Smilons", (gameLifePoints)/ 6));
 	   nations.add(new Nation("Naveed", (gameLifePoints) / 6));
 	   nations.add(new Nation("Perez", (gameLifePoints) / 6));
+        nations.add(new Nation("Toyberg", (gameLifePoints) / 6));
 
 
         // could add and delete nations. return number of nations + 1 from add and number of nations -1 from remove.
