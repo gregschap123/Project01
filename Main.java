@@ -23,7 +23,7 @@ public class Main {
         String[] nationNames = {"Idiots", "Minions", "Smilons", "Naveed", "Perez", "Toyberg"};
         for(String name : nationNames)
             {
-            nations.add(new Nation(name, gameLifePoints/ (Nation.nationCount + 1)));
+            nations.add(new Nation(name, gameLifePoints / nationNames.length));
             }
 
 
