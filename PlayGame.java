@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.*;
 /**
-* PlayGame.java is where the 
+* PlayGame.java is where the nations start attacking each other. 
 */
 public class PlayGame
 {
