@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import Project01.Tribe;
 import Project01.People;
 
+/**
+ *
+ * This class creates named Nation objects with undefined number of lifepoints.
+ * Defines a Nation is made up of 3 Tribes, each tribe gets 1/3 of Nation's lifepoints.
+ * Keeps track of population of Nation and Tribes and determines if Nation and Tribes are alive or dead.
+ *
+ */
+
 public class Nation
 {
     private int nationLifePoints;
@@ -37,6 +45,7 @@ public class Nation
     }
 
     /**
+     *
      * @return true if this nation has life points remaining
      */
     public Boolean isNationAlive()
@@ -78,7 +87,7 @@ public class Nation
 
 
     /**
-     * 
+     *
      * Print whether tribe is still alive(and number of members alive) or is dead
      */
     public void printTribesStatus()
