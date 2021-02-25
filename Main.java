@@ -19,24 +19,25 @@ public class Main {
        ArrayList<Nation> nations = new ArrayList<>() ; // nations create tribes create people
        PlayGame game = new PlayGame();
 
-  	   nations.add(new Nation("Idiots", (gameLifePoints / 6)));
-  	   nations.add(new Nation("Minions", (gameLifePoints) / 6));
-  	   nations.add(new Nation("Smilons", (gameLifePoints)/ 6));
-  	   nations.add(new Nation("Naveed", (gameLifePoints) / 6));
-  	   nations.add(new Nation("Perez", (gameLifePoints) / 6));
-  	   nations.add(new Nation("Toyberg", (gameLifePoints) / 6));
+        // add Nations participating in the game to nations ArrayList.
+        String[] nationNames = {"Idiots", "Minions", "Smilons", "Naveed", "Perez", "Toyberg"};
+        for(String name : nationNames)
+            {
+            nations.add(new Nation(name, gameLifePoints/ (Nation.nationCount + 1)));
+            }
 
 
-  	   for(int i = 0; i < 40; i++)
-         {
-             System.out.println("Round number: " + i);
-             if (game.playOneRound(nations))
-             {
-                 System.out.println("There is a winner!");
-                 break; // game over
-             }
-         }
+        // 40 rounds max. If winner is reached before round 40, end program and declare winner.
+        for(int i = 0; i < 40; i++)
+       {
+           System.out.println("Round number: " + i);
+           if (game.playOneRound(nations))
+           {
+               System.out.println("There is a winner!");
+               break; // game over
+           }
+       }
 
-  	   System.out.println("The winning nation is " + game.getWinner() + ".");
+	   System.out.println("The winning nation is " + game.getWinner() + ".");
     }
 }
