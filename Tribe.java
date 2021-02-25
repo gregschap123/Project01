@@ -45,7 +45,7 @@ public class Tribe
 
     /**
      *Gets and returns the number of living tribe members based on the size of
-     *the members array list.
+     *the members array list. Also keeps track of the tribes current life points.
      * @return livingMembers
     */
     public ArrayList<People> getLivingTribeMembers()
