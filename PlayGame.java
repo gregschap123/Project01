@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.*;
-
+/**
+* PlayGame.java is where the 
+*/
 public class PlayGame
 {
 
@@ -12,12 +14,19 @@ public class PlayGame
     ArrayList<Project01.People> worldLivingPopulation = new ArrayList<>();
     Random generator;
 
+    /**
+    * This class will start the game and determine which nation will in the game. 
+    */
     public PlayGame()
     {
         Date seed = new Date();
         generator = new Random(seed.getTime());
     }
 
+    /**
+    * Adding the total population of the world by counting each nation's population.
+    * @param nations An Arraylist of nations in the world
+	*/
     public void getWorldLivingPopulation(ArrayList<Nation> nations)
     {
         // add all living people to world list
@@ -30,6 +39,10 @@ public class PlayGame
     }
 
 
+    /**
+    * Adding nations in the allLivingNations ArrayList if they are alive.
+    * @param nations ArrayList of nations in the world.
+    */
     public void getAllLivingNations(ArrayList<Nation> nations)
     {
         getWorldLivingPopulation(nations);
@@ -45,6 +58,13 @@ public class PlayGame
     }
 
 
+    /**
+    * This method takes a parameter of two people and checks if the two people are not from the same 
+    * nation. Then the two people fight each other and both loses damage. It prints out a statement
+    * of the life points of each other.
+    * @param p1 A person from the People class
+    * @param p2 A person from the People class
+    */
     public void encounter(Project01.People p1, Project01.People p2)
     {
         // need to fix this to take strategies into account.
@@ -62,7 +82,12 @@ public class PlayGame
 
 
 
-
+    /**
+    * This method calls getAllLivingNations with parameter and use a while loop to check if the arraylist 
+    * is greater than 1 and index is less the size of worldLivingPopulation Arraylist
+    * @param nations An Arraylist of nations
+    * @return Boolean 
+    */
     public Boolean playOneRound(ArrayList<Nation> nations)
     {
         getAllLivingNations(nations);
@@ -88,7 +113,9 @@ public class PlayGame
 
     }
 
-
+    /**
+    * @return a string of nation that won or no one
+    */
     public String getWinner()
     {
         if (allLivingNations.size() == 0)
