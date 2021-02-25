@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import Project01.People;
 import Project01.PeopleType;
 
+/**
+ * Class is used to create a tribe under a nation that has a certain amount of life points.
+ */
 public class Tribe
 {
     private String nationName;
@@ -13,6 +16,14 @@ public class Tribe
     private int tribeLifePoints;
     private ArrayList<People> members = new ArrayList<>();
     private ArrayList<People> livingMembers = new ArrayList<>();
+
+    /**
+     * Create tribes under the given nation using the people types warrior, wizzard, healer.
+     * Each tribe is given 1/3 of the life points.
+     * @param lifePoints is the remaining health the tribe has.
+     * @param nation the given nation name that the tribe will be located under.
+     * @param tribe the name of the tribe
+     */
 
     public Tribe(String nation, String tribe, int lifePoints)
     {
@@ -32,6 +43,11 @@ public class Tribe
             livingMembers.addAll(members);
     }
 
+    /**
+     *Gets and returns the number of living tribe members based on the size of
+     *the members array list.
+     * @return livingMembers
+    */
     public ArrayList<People> getLivingTribeMembers()
     {
         livingMembers.clear();
@@ -59,27 +75,42 @@ public class Tribe
 */
 
 
+    /**
+     * @return size of the current living members
+     * */
     public int getTribeSize()
     {
         return livingMembers.size();
     }
 
+    /**
+     * @return if tripe is alive
+     */
     public Boolean isTribeAlive()
     {
         return (tribeLifePoints > 0);
     }
 
 
+    /**
+     * @return the number of life points remaining
+     */
     public int getTribeLifePoints()
     {
         return tribeLifePoints;
     }
 
+    /**
+     * @return the name of the given tribe
+     */
     public String getTribeName()
     {
         return tribeName;
     }
 
+    /**
+     * @return concat the tribe members to the tribe name
+     */
     public String toString()
     {
         String result = "\0";
