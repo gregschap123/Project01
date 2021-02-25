@@ -16,6 +16,13 @@ public class Nation
     private ArrayList<People> livingPopulation = new ArrayList<>();
 
 
+    /**
+     * Create a nation with name and number of lifepoints.
+     * This nation has 3 tribes with equal amounts of lifepoints (nation's life points / 3)
+     *
+     * @param name name of the Nation
+     * @param lifePoints number of lifepoints assigned to nation
+     */
     public Nation(String name, int lifePoints)
     {
         nationCount++;
@@ -29,12 +36,19 @@ public class Nation
         livingPopulation.addAll(population);
     }
 
-
+    /**
+     * @return true if this nation has life points remaining
+     */
     public Boolean isNationAlive()
     {
         return (nationLifePoints > 0);
     }
 
+
+    /**
+     *
+     * @return population of this nation
+     */
     public ArrayList<People> getNationPopulation()
     {
         nationLifePoints = 0;
@@ -53,12 +67,20 @@ public class Nation
     }
 
 
+    /**
+     *
+     * @return name of this nation
+     */
     public String getNationName()
     {
         return nationName;
     }
 
 
+    /**
+     * 
+     * Print whether tribe is still alive(and number of members alive) or is dead
+     */
     public void printTribesStatus()
     {
         for(int tribe = 0; tribe < 1; tribe++)
